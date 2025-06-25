@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumb Gardens | Contact Us</title>
+    <style>
+        :root {
+            --primary: #4a8f29;
+            --primary-dark: #2a5e15;
+            --secondary: #f8f9fa;
+            --accent: #f4d03f;
+            --text: #333;
+            --light: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--secondary);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .contact-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('s6.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            color: var(--light);
+            text-align: center;
+        }
+
+        .contact-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .contact-form-container {
+            background-color: var(--light);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+            background-color: var(--light);
+        }
+
+        .contact-content {
+            background-color: var(--light);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-point {
+            margin-bottom: 2rem;
+        }
+
+        .contact-point h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--light);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-form-container,
+            .contact-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Green<span>Thumb</span></a>
+                <div class="nav-links">
+                   <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Contact GreenThumb Gardens</h1>
+            <p>We're here to help with all your gardening needs. Reach out today!</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="contact-form-container">
+                <h2 class="section-title">Get in Touch</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="design">Garden Design</option>
+                            <option value="maintenance">Seasonal Maintenance</option>
+                            <option value="lawn">Lawn Care</option>
+                            <option value="irrigation">Irrigation Systems</option>
+                            <option value="edible">Edible Gardens</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Comprehensive Contact Information</h2>
+                
+                <div class="contact-point">
+                    <h3>1. Office Hours</h3>
+                    <p>Our main office is open Monday through Friday from 8:00 AM to 6:00 PM, and Saturdays from 9:00 AM to 2:00 PM. We are closed on Sundays and major holidays. For emergency services outside these hours, please call our after-hours line at (123) 456-7891. Our customer service representatives are available during business hours to answer questions, schedule consultations, and provide estimates. Extended hours may be available during peak seasons.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>2. Physical Location</h3>
+                    <p>Our headquarters is located at 721 Broadway, New York, NY 10003, USA. The office features a small demonstration garden showcasing our work. Visitors are welcome during business hours, but appointments are recommended for detailed consultations. Parking is available in the adjacent lot, and our facility is wheelchair accessible. Please check in with reception upon arrival. For deliveries, please use the loading dock at the rear of the building.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>3. Phone Support</h3>
+                    <p>For immediate assistance, call our main line at (123) 456-7890. Our automated system can direct you to the appropriate department: press 1 for new services, 2 for existing customers, 3 for billing, and 4 for all other inquiries. Average wait times are less than 3 minutes during business hours. International customers can reach us at +1-123-456-7890. For hearing-impaired customers, we offer TTY services at (123) 456-7892.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>4. Email Communication</h3>
+                    <p>Send general inquiries to info@greenthumb.com, service requests to service@greenthumb.com, and billing questions to billing@greenthumb.com. We strive to respond to all emails within 24 business hours. For faster service, please include your account number (if applicable) and a detailed description of your request. Attachments should not exceed 10MB. To ensure delivery, add our domain to your email whitelist and check your spam folder if you don't receive a response.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>5. Emergency Services</h3>
+                    <p>For urgent matters requiring immediate attention (such as storm damage or hazardous tree situations), call our 24/7 emergency line at (123) 456-7899. This line is monitored continuously by our response team. Additional charges may apply for after-hours services. Describe the situation clearly and provide your exact location. If possible, send photos of the issue to emergency@greenthumb.com to help us prepare the appropriate response team.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>6. Social Media</h3>
+                    <p>Connect with us on Facebook (@GreenThumbGardens), Instagram (@GreenThumbOfficial), and Twitter (@GT_Gardens). We monitor these platforms daily and typically respond within a few hours. Social media is ideal for general questions, sharing photos of your garden, or seeing examples of our work. For account-specific issues, please contact us through official channels to protect your privacy. We post seasonal tips, promotions, and event announcements regularly.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>7. Consultation Appointments</h3>
+                    <p>Initial consultations can be scheduled online through our booking system or by calling our office. Most consultations last 60-90 minutes and include a property assessment, discussion of your goals, and preliminary recommendations. There is a $75 consultation fee credited toward any services booked within 30 days. Please have property surveys or plans available if possible. Evening and weekend appointments may be available for an additional fee.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>8. Service Area</h3>
+                    <p>We serve all five boroughs of New York City and surrounding counties within a 50-mile radius of our headquarters. Service availability may vary by location and season. Some specialized services have narrower geographic limits. Contact us with your ZIP code to confirm coverage in your area. We're expanding our service areas annually and maintain a waiting list for locations we don't currently serve. Corporate accounts may qualify for extended service areas.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>9. Billing Inquiries</h3>
+                    <p>For questions about invoices, payments, or account balances, contact our billing department at billing@greenthumb.com or (123) 456-7893. Please have your invoice number ready when calling. Payments can be made online through our customer portal, by phone, by mail, or in person at our office. We accept all major credit cards, checks, and electronic transfers. Late payments may incur a 1.5% monthly finance charge. Payment plans may be available for large projects.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>10. Employment Opportunities</h3>
+                    <p>We're always looking for talented horticulturists, designers, and maintenance professionals. Current openings are posted on our careers page at careers.greenthumb.com. Applications can be submitted online or in person at our HR office (enter through the west entrance). Seasonal positions typically open in March and September. All applicants must pass a background check and drug screening. Benefits include health insurance for full-time employees, training programs, and equipment allowances.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>11. Vendor Inquiries</h3>
+                    <p>Suppliers and service providers interested in working with GreenThumb Gardens should contact procurement@greenthumb.com. Include your company overview, product/service details, and references. We prioritize local, sustainable, and minority-owned businesses in our supply chain. New vendor applications are reviewed quarterly. Approved vendors will be added to our bidding list and must complete our vendor certification process, which includes insurance verification and quality standards review.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>12. Media Requests</h3>
+                    <p>Members of the press should direct inquiries to media@greenthumb.com or call (123) 456-7894. We're happy to provide expert commentary on gardening trends, urban landscaping, and sustainability topics. Please allow 48 hours for response to media requests. Photography and filming on our properties require advance permission. Our media kit, including company background, high-resolution images, and executive bios, is available upon request.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>13. Community Partnerships</h3>
+                    <p>We actively support community gardens, school programs, and nonprofit initiatives. Partnership proposals can be sent to community@greenthumb.com. Include your organization's mission, proposed collaboration details, and expected outcomes. Our community relations committee meets monthly to review requests. Priority is given to projects that align with our sustainability mission and serve underserved populations. In-kind donations and volunteer opportunities are available seasonally.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>14. Customer Feedback</h3>
+                    <p>We value your input to help us improve. Share compliments, concerns, or suggestions at feedback@greenthumb.com or through our online feedback form. All submissions are reviewed by our customer experience team within 2 business days. For service-related issues, please include your service date and location to help us investigate. Anonymous feedback is accepted but limits our ability to follow up. We publish aggregated feedback in our annual quality report.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>15. Franchise Opportunities</h3>
+                    <p>Entrepreneurs interested in opening a GreenThumb Gardens franchise can request information at franchise@greenthumb.com. Our franchise program includes comprehensive training, marketing support, and operational systems. Minimum requirements include $250,000 in liquid assets and relevant business experience. Franchise information sessions are held quarterly at our headquarters. Current franchise opportunities are available in select markets, with expansion plans for the Northeast and Midwest regions.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>16. Educational Programs</h3>
+                    <p>We offer workshops, classes, and certification programs through our GreenThumb Academy. Current schedules and registration are available at academy.greenthumb.com. Topics range from basic gardening to advanced landscape design. Group discounts are available for 10+ participants. Custom programs can be developed for schools, community groups, or corporate teams. Our facility includes classroom space, demonstration gardens, and a reference library available to program participants.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>17. Gift Certificates</h3 <p>Gift certificates for our services are available in various denominations and can be purchased online or at our office. They make perfect gifts for gardening enthusiasts and can be redeemed for any of our services, including consultations, design work, and maintenance. Gift certificates are valid for one year from the date of purchase and are non-refundable. To purchase, visit our website or contact our customer service team for assistance. Custom gift certificates can also be created for special occasions.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>18. Sustainability Practices</h3>
+                    <p>GreenThumb Gardens is committed to sustainable practices in all our operations. We use organic fertilizers, native plants, and eco-friendly pest control methods to minimize our environmental impact. Our team is trained in sustainable landscaping techniques, and we encourage clients to adopt practices that promote biodiversity and conservation. We also participate in local sustainability initiatives and support community efforts to create green spaces. For more information on our sustainability efforts, visit our website.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>19. Seasonal Services</h3>
+                    <p>Our services are tailored to the changing seasons, ensuring your garden remains healthy and vibrant year-round. In spring, we offer planting and garden design services; summer focuses on maintenance and irrigation; fall includes clean-up and preparation for winter; and winter services may involve snow removal and planning for the next growing season. We recommend scheduling seasonal services in advance to secure your preferred dates. Our team can provide a seasonal service plan customized to your garden's needs.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>20. Pest Management</h3>
+                    <p>Effective pest management is crucial for maintaining a healthy garden. We offer integrated pest management (IPM) services that focus on prevention, monitoring, and control using environmentally friendly methods. Our trained specialists can identify pest issues and recommend appropriate treatments that minimize harm to beneficial insects and the ecosystem. Regular inspections and treatments can help prevent infestations and protect your plants. Contact us for a pest management consultation tailored to your garden.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>21. Landscape Design Services</h3>
+                    <p>Our landscape design services encompass everything from initial consultations to the final installation of your dream garden. We work closely with clients to understand their vision, preferences, and budget. Our designs incorporate elements such as hardscaping, plant selection, and water features to create a cohesive and functional outdoor space. We also provide 3D renderings to help visualize the final product. Schedule a consultation to discuss your landscape design project with our experienced team.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>22. Lawn Care Programs</h3>
+                    <p>Maintaining a healthy lawn requires regular care and attention. Our lawn care programs include fertilization, aeration, overseeding, and weed control tailored to your lawn's specific needs. We use high-quality products and techniques to promote lush, green growth while minimizing environmental impact. Our team can assess your lawn's condition and recommend a customized care plan. Regular maintenance visits ensure your lawn remains healthy and beautiful throughout the growing season.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>23. Irrigation Systems</h3>
+                    <p>Efficient irrigation is essential for conserving water and ensuring your plants receive adequate moisture. We design and install irrigation systems tailored to your landscape's needs, including drip irrigation, sprinkler systems, and smart controllers. Our team can assess your property and recommend the best irrigation solution to optimize water usage and promote healthy plant growth. Regular maintenance and seasonal adjustments are also available to ensure your system operates efficiently year-round.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>24. Edible Gardens</h3>
+                    <p>Growing your own food is rewarding and sustainable. We offer services to design and install edible gardens, including vegetable beds, herb gardens, and fruit trees. Our team can provide guidance on plant selection, soil preparation, and maintenance practices to ensure a successful harvest. We also offer workshops on organic gardening techniques and seasonal planting schedules. Whether you're a beginner or an experienced gardener, we can help you create a productive edible garden.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>25. Hardscaping Services</h3>
+                    <p>Hardscaping elements such as patios, walkways, and retaining walls enhance the functionality and aesthetics of your outdoor space. Our team specializes in designing and installing hardscaping features that complement your landscape. We use high-quality materials and craftsmanship to ensure durability and visual appeal. Whether you're looking to create an outdoor entertaining area or improve accessibility, we can help bring your hardscaping vision to life. Schedule a consultation to discuss your project.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>26. Seasonal Clean-Up</h3>
+                    <p>Seasonal clean-up services are essential for maintaining a healthy garden. In the spring, we remove debris, prune plants, and prepare your garden for planting. In the fall, we focus on leaf removal, winterizing plants, and preparing your landscape for the colder months. Our team can create a seasonal clean-up plan tailored to your garden's needs, ensuring it remains healthy and beautiful throughout the year. Contact us to schedule your seasonal clean-up service.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>27. Tree Care Services</h3>
+                    <p>Proper tree care is vital for the health and longevity of your trees. We offer a range of tree care services, including pruning, cabling, and removal. Our certified arborists can assess the health of your trees and recommend appropriate care measures. We prioritize safety and use industry-standard practices to ensure the well-being of your trees and property. Regular tree maintenance can prevent hazards and promote healthy growth. Schedule a consultation for your tree care needs.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>28. Garden Maintenance Plans</h3>
+                    <p>Our garden maintenance plans are designed to keep your landscape looking its best year-round. Services include regular weeding, pruning, fertilization, and pest management. We offer customizable plans based on your garden's specific needs and your preferences. Our team can work with you to create a maintenance schedule that fits your lifestyle and budget. Regular maintenance visits ensure your garden remains healthy, vibrant, and enjoyable throughout the seasons.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>29. Landscape Lighting</h3>
+                    <p>Enhance the beauty and safety of your outdoor space with landscape lighting. We design and install lighting systems that highlight your garden's features while providing illumination for pathways and patios. Our energy-efficient LED options offer long-lasting performance and lower energy costs. Proper lighting can extend the usability of your outdoor areas and create a welcoming atmosphere. Contact us to discuss your landscape lighting needs and schedule a consultation.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>30. Water Features</h3>
+                    <p>Water features such as ponds, fountains, and waterfalls add tranquility and beauty to your landscape. Our team specializes in designing and installing custom water features that complement your garden's style. We can help you choose the right type of water feature based on your space and preferences. Regular maintenance services are also available to keep your water feature clean and functioning properly. Schedule a consultation to explore the possibilities of adding a water feature to your garden.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>31. Garden Design Workshops</h3>
+                    <p>We offer hands-on workshops for those interested in learning more about garden design. Participants will gain practical skills in plant selection, layout planning, and sustainable practices. Workshops are suitable for all skill levels and provide an opportunity to work alongside our experienced designers. Check our website for upcoming workshop dates and registration details. Group rates are available for organizations and community groups interested in hosting a workshop.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>32. Community Events</h3>
+                    <p>GreenThumb Gardens hosts various community events throughout the year, including garden tours, plant swaps, and educational seminars. These events are designed to promote gardening knowledge and foster community engagement. Check our events calendar on our website for upcoming events and registration information. We welcome participation from all community members and encourage sharing gardening experiences and tips. Join us to connect with fellow gardening enthusiasts!</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>33. Volunteer Opportunities</h3>
+                    <p>We offer volunteer opportunities for individuals and groups interested in supporting our community gardening initiatives. Volunteers can assist with planting, maintenance, and educational programs. This is a great way to gain hands-on experience while contributing to local green spaces. Interested volunteers can fill out an application on our website or contact our community outreach coordinator for more information. We appreciate the support of our volunteers and provide training and resources to ensure a rewarding experience.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>34. Customer Loyalty Program</h3>
+                    <p>Our customer loyalty program rewards repeat clients with discounts and exclusive offers. Enroll in the program to earn points for every service booked, which can be redeemed for future discounts. Members also receive early access to promotions and special events. To join, simply ask your service representative or sign up through our website. We value our loyal customers and strive to provide exceptional service and value.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>35. Referral Program</h3>
+                    <p>Refer a friend to GreenThumb Gardens and receive a discount on your next service! For every new client you refer who books a service, you will receive a $50 credit toward your next project. There’s no limit to the number of referrals you can make. To participate, simply have your friend mention your name when they contact us. We appreciate your support in helping us grow our community of satisfied customers.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>36. Seasonal Promotions</h3>
+                    <p>We offer seasonal promotions throughout the year to help you save on our services. These promotions may include discounts on specific services, package deals, or special offers for new clients. Check our website or subscribe to our newsletter to stay updated on current promotions. Our seasonal offers are designed to encourage timely maintenance and enhance your garden's beauty. Don’t miss out on these limited-time opportunities!</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>37. Gardening Resources</h3>
+                    <p>Our website features a wealth of gardening resources, including articles, videos, and guides on various topics. Whether you're looking for tips on plant care, pest management, or landscape design, our resources are designed to help you succeed in your gardening endeavors. We also host a blog where our experts share insights and advice. Visit our resources section to explore our library of gardening knowledge and stay informed about the latest trends and techniques.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>38. Customer Testimonials</h3>
+                    <p>We take pride in our customer satisfaction and encourage clients to share their experiences. Testimonials can be submitted through our website or social media channels. We feature selected testimonials on our website and marketing materials to showcase our work. Your feedback helps us improve our services and build trust with potential clients. Thank you for being a valued part of the GreenThumb Gardens community!</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>39. Frequently Asked Questions</h3>
+                    <p>We have compiled a list of frequently asked questions to assist our clients in finding quick answers. Topics include service details, pricing, scheduling, and more. Visit our FAQ page for helpful information. If you have a question that isn’t answered there, feel free to reach out to us directly. We are here to help and ensure you have all the information you need to make informed decisions about your gardening needs.</p>
+                </div>
+
+                <div class="contact-point">
+                    <h3>40. Conclusion</h3>
+                    <p>Thank you for considering GreenThumb Gardens for your gardening needs. We are committed to providing exceptional service and support to our clients. Whether you have questions, need assistance, or want to schedule a service, we are here to help. Please don’t hesitate to reach out through any of the contact methods listed above. We look forward to working with you and helping you create the garden of your dreams!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>721 Broadway, New York, NY 10003, USA</li>
+                    <li>Email: info@greenthumb.com</li>
+                    <li>Phone: (123) 456-7890</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 GreenThumb Gardens. All rights reserved.</p>
+            <p>Disclaimer: The information provided on this website is for general informational purposes only and should not be considered professional advice.</p>
+        </div>
+    </footer>
+</body>
+</html> --- End of CSV data ---

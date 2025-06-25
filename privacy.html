@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumb Gardens | Privacy Policy</title>
+    <style>
+        :root {
+            --primary: #4a8f29;
+            --primary-dark: #2a5e15;
+            --secondary: #f8f9fa;
+            --accent: #f4d03f;
+            --text: #333;
+            --light: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--secondary);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .privacy-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('s6.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            color: var(--light);
+            text-align: center;
+        }
+
+        .privacy-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .privacy-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .privacy-content {
+            background-color: var(--light);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .privacy-point {
+            margin-bottom: 2rem;
+        }
+
+        .privacy-point h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--light);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .privacy-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .privacy-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Green<span>Thumb</span></a>
+                <div class="nav-links">
+                    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="privacy-hero">
+        <div class="privacy-hero-content">
+            <h1>Privacy Policy</h1>
+            <p>Your privacy is important to us. Learn how we collect, use, and protect your information.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="privacy-content">
+                <h2 class="section-title">Our Commitment to Your Privacy</h2>
+                
+                <div class="privacy-point">
+                    <h3>1. Information Collection</h3>
+                    <p>We collect personal information when you register on our site, place an order, subscribe to our newsletter, or fill out a form. This may include your name, email address, mailing address, phone number, or credit card information. We also collect non-personal information like browser type, operating system, and the domain name of your Internet Service Provider to improve our services.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>2. Use of Information</h3>
+                    <p>The information we collect may be used to personalize your experience, improve our website, improve customer service, process transactions, administer contests or promotions, and send periodic emails. Your information helps us respond more effectively to your customer service requests and support needs. Transaction processing uses your information only for that specific purpose unless we obtain your consent otherwise.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>3. Information Protection</h3>
+                    <p>We implement a variety of security measures to maintain the safety of your personal information. All supplied sensitive/credit information is transmitted via Secure Socket Layer (SSL) technology and encrypted into our payment gateway providers' database only accessible by authorized personnel with special access rights to such systems. After a transaction, your private information (credit cards, social security numbers, financials, etc.) is not stored on our servers.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>4. Cookies Usage</h3>
+                    <p>We use cookies to help us remember and process the items in your shopping cart, understand and save your preferences for future visits, and compile aggregate data about site traffic and interaction. Cookies are small files transferred to your computer's hard drive through your web browser that enable our systems to recognize your browser and capture certain information.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>5. Third-Party Disclosure</h3>
+                    <p>We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties unless we provide users with advance notice. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential. We may also release information when its release is appropriate to comply with the law.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>6. Third-Party Links</h3>
+                    <p>Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We therefore have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>7. California Online Privacy Protection Act</h3>
+                    <p>We comply with the California Online Privacy Protection Act (CalOPPA). According to CalOPPA, we agree that users can visit our site anonymously. Our Privacy Policy link includes the word 'Privacy' and can easily be found on the page specified above. Users will be notified of any privacy policy changes on our Privacy Policy Page, and users can change their personal information by logging into their account.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>8. Children's Online Privacy Protection Act</h3>
+                    <p>We comply with the requirements of COPPA (Children's Online Privacy Protection Act). Our website is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If we discover that a child under 13 has provided us with personal information, we will delete such information from our systems immediately.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>9. Fair Information Practices</h3>
+                    <p>In compliance with Fair Information Practices, should a data breach occur, we will notify affected individuals via email within 7 business days. We also agree with the individual redress principle which requires that individuals have the right to legally pursue enforceable rights against data collectors and processors who fail to adhere to the law.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>10. CAN-SPAM Act</h3>
+                    <p>We comply with the CAN-SPAM Act, which sets rules for commercial email, establishes requirements for commercial messages, gives recipients the right to have emails stopped from being sent to them, and spells out tough penalties for violations. We collect your email address to send information, respond to inquiries, and market to our mailing list. To be in accordance with CAN-SPAM, we agree to not use false or misleading subjects or email addresses, identify the message as an advertisement, include our business address, monitor third-party email marketing services, honor opt-out requests promptly, and allow users to unsubscribe.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>11. GDPR Compliance</h3>
+                    <p>For users in the European Union, we adhere to the General Data Protection Regulation (GDPR). Under GDPR, you have the right to access, rectify, erase, restrict processing of, and port your personal data. You also have the right to object to processing and the right to lodge a complaint with a supervisory authority. We only collect data with your explicit consent and for legitimate business purposes.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>12. Data Retention Policy</h3>
+                    <p>We retain personal data only for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements. To determine the appropriate retention period, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorized use or disclosure, the purposes for which we process your personal data, and applicable legal requirements.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>13. Data Breach Procedures</h3>
+                    <p>We have implemented procedures to deal with any suspected personal data breach and will notify you and any applicable regulator of a breach where we are legally required to do so. Our breach response plan includes immediate assessment of the breach scope, containment measures, notification procedures, and post-breach review to prevent future occurrences. All employees are trained on breach response protocols.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>14. International Data Transfers</h3>
+                    <p>Your information, including personal data, may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this privacy policy, including implementing appropriate contractual clauses and safeguards for international data transfers.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>15. Your Rights Under CCPA</h3>
+                    <p>Under the California Consumer Privacy Act (CCPA), California residents have the right to request access to their personal information, request deletion of their personal information, opt-out of the sale of their personal information, and not be discriminated against for exercising these rights. We do not sell personal information. Requests can be submitted through our website or by contacting us directly.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>16. Automated Decision Making</h3>
+                    <p>We do not use automated decision-making or profiling that would produce legal effects concerning you or similarly significantly affect you. Any automated processing is limited to non-sensitive data for operational purposes like fraud prevention and website personalization. You have the right to request human intervention or challenge automated decisions.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>17. Data Processing Agreements</h3>
+                    <p>When we use third-party service providers to process personal data on our behalf, we enter into data processing agreements that require them to implement appropriate technical and organizational measures to protect personal data. These agreements specify the nature and purpose of processing, the type of personal data involved, the duration of processing, and the obligations and rights of both parties.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>18. Privacy by Design</h3>
+                    <p>We implement privacy by design principles in our systems and processes, ensuring data protection from the onset of system design through the entire lifecycle. This includes data minimization, purpose limitation, accuracy, storage limitation, integrity and confidentiality, and accountability. New products and features undergo privacy impact assessments before implementation.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>19. Employee Training</h3>
+                    <p>All employees who handle personal data receive regular training on data protection principles, security protocols, and their responsibilities under applicable privacy laws. Training covers secure data handling, breach prevention, incident reporting procedures, and the importance of maintaining confidentiality. Employees must acknowledge understanding of these policies annually.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>20. Vendor Management</h3>
+                    <p>We carefully vet all third-party vendors who may process personal data on our behalf, assessing their security measures and compliance with applicable privacy laws. Vendor contracts include strict confidentiality obligations, security requirements, audit rights, and provisions for breach notification. We periodically review vendor performance and compliance with our standards.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>21. Data Accuracy</h3>
+                    <p>We take reasonable steps to ensure the personal data we process is accurate, complete, and current. Users can update their information through their account settings or by contacting us directly. We implement processes to identify and correct inaccurate or incomplete data, including periodic reviews and validation checks against reliable sources when appropriate.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>22. Data Minimization</h3>
+                    <p>We collect only the personal data that is adequate, relevant, and limited to what is necessary for the purposes for which it is processed. Our data collection forms clearly indicate which fields are required and which are optional. We regularly review our data collection practices to eliminate unnecessary data collection and reduce retention periods where possible.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>23. Security Measures</h3>
+                    <p>We implement appropriate technical and organizational security measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure, or access. These measures include encryption, access controls, network security, physical security, regular security testing, and incident response plans. Security measures are reviewed and updated regularly.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>24. Consent Management</h3>
+                    <p>Where we rely on consent as the legal basis for processing personal data, we ensure consent is freely given, specific, informed, and unambiguous. Consent requests are presented clearly and separately from other terms. Users can withdraw consent at any time through simple mechanisms, and we maintain records of consent given. We do not use pre-ticked boxes or other methods of consent by default.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>25. Legitimate Interests</h3>
+                    <p>Where we process personal data based on legitimate interests, we conduct balancing tests to ensure our interests don't override individual rights and freedoms. Examples include fraud prevention, network security, direct marketing, and service improvement. Users can object to processing based on legitimate interests, and we will cease processing unless we demonstrate compelling legitimate grounds.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>26. Special Category Data</h3 <div class="privacy-point">
+                    <h3>26. Special Category Data</h3>
+                    <p>We do not process special category data as defined by GDPR, which includes sensitive information such as racial or ethnic origin, political opinions, religious beliefs, health data, or sexual orientation. If we ever need to process such data, we will obtain explicit consent from the individual and ensure additional safeguards are in place to protect this information.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>27. Data Subject Rights</h3>
+                    <p>Individuals have the right to request access to their personal data, rectify inaccuracies, erase data, restrict processing, and receive a copy of their data in a structured, commonly used format. Requests can be made through our website or by contacting us directly. We will respond to requests within the legally required timeframe and provide the necessary information.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>28. Privacy Notices</h3>
+                    <p>We provide clear and concise privacy notices at the point of data collection, informing users about the purpose of data collection, the legal basis for processing, data retention periods, and their rights. Privacy notices are easily accessible and written in plain language to ensure understanding. We update notices as necessary to reflect changes in our practices or legal requirements.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>29. Data Protection Officer</h3>
+                    <p>We have appointed a Data Protection Officer (DPO) responsible for overseeing our data protection strategy and ensuring compliance with applicable laws. The DPO is available to answer questions, address concerns, and provide guidance on data protection matters. Contact information for the DPO is available on our website.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>30. Privacy Impact Assessments</h3>
+                    <p>We conduct Privacy Impact Assessments (PIAs) for new projects or initiatives that may impact personal data. PIAs help identify and mitigate privacy risks, ensuring compliance with legal requirements and best practices. The assessments consider the nature of the data, the purpose of processing, and the potential impact on individuals' privacy rights.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>31. Data Portability</h3>
+                    <p>Users have the right to request the transfer of their personal data to another organization or directly to themselves in a structured, commonly used, and machine-readable format. We will facilitate data portability requests where feasible and ensure that the transfer is secure and compliant with applicable laws.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>32. Changes to Our Privacy Policy</h3>
+                    <p>We may update our privacy policy from time to time to reflect changes in our practices or legal requirements. We will notify users of any significant changes through email or a prominent notice on our website. Users are encouraged to review our privacy policy periodically to stay informed about how we protect their information.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>33. Contacting Us</h3>
+                    <p>If you have any questions about this privacy policy, the practices of our site, or your dealings with our site, please contact us at:</p>
+                    <p>Email: info@greenthumb.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 721 Broadway, New York, NY 10003, USA</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>34. User Consent</h3>
+                    <p>By using our site, you consent to our privacy policy. If you do not agree with our policy, please do not use our site. We encourage users to review our privacy policy regularly to stay informed about our practices and their rights.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>35. Data Security Breaches</h3>
+                    <p>In the event of a data security breach, we will take immediate action to contain the breach and assess its impact. We will notify affected individuals and relevant authorities as required by law. Our incident response plan includes steps for investigation, remediation, and prevention of future breaches.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>36. User Rights Under GDPR</h3>
+                    <p>Users in the EU have specific rights under GDPR, including the right to access their data, rectify inaccuracies, erase data, restrict processing, and object to processing. We respect these rights and provide mechanisms for users to exercise them easily. Users can contact us to learn more about their rights and how to exercise them.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>37. Data Sharing with Third Parties</h3>
+                    <p>We may share personal data with third parties for specific purposes, such as payment processing, marketing, or analytics. We ensure that third parties comply with applicable data protection laws and have appropriate safeguards in place to protect personal data. Users will be informed of any data sharing practices in our privacy notices.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>38. Data Retention and Deletion</h3>
+                    <p>We retain personal data only as long as necessary to fulfill the purposes for which it was collected, including legal and regulatory requirements. Users can request deletion of their data at any time, and we will comply with such requests unless we have a legitimate reason to retain the data. Our data retention policy is regularly reviewed to ensure compliance.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>39. User Feedback and Complaints</h3>
+                    <p>We value user feedback and take complaints seriously. Users can submit feedback or complaints regarding our privacy practices through our contact information provided above. We will investigate all complaints and respond promptly, taking appropriate action to address any issues raised.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>40. Conclusion</h3>
+                    <p>Your privacy is of utmost importance to us. We are committed to protecting your personal information and ensuring transparency in our data practices. By using our services, you agree to the terms outlined in this privacy policy. We encourage you to reach out with any questions or concerns regarding your privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>721 Broadway, New York, NY 10003, USA</li>
+                    <li>Email: info@greenthumb.com</li>
+                    <li>Phone: (123) 456-7890</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 GreenThumb Gardens. All rights reserved.</p>
+            <p>Disclaimer: The information provided on this website is for general informational purposes only and should not be considered professional advice.</p>
+        </div>
+    </footer>
+</body>
+</html>

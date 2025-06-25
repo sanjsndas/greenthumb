@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumb Gardens | Expert Gardening Services</title>
+    <style>
+        :root {
+            --primary: #4a8f29;
+            --primary-dark: #2a5e15;
+            --secondary: #f8f9fa;
+            --accent: #f4d03f;
+            --text: #333;
+            --light: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--secondary);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('s6.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: var(--light);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+            background-color: var(--light);
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .about {
+            background-color: var(--light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonials {
+            background-color: var(--secondary);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .feedback-form {
+            background-color: var(--light);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+        }
+
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .tip-card {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .tip-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--light);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .customer-satisfaction {
+            background-color: var(--light);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .satisfaction-metrics {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            text-align: center;
+        }
+
+        .metric h2 {
+            color: var(--primary);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Green<span>Thumb</span></a>
+                <div class="nav-links">
+   <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transforming Outdoor Spaces</h1>
+            <p>Professional gardening services to create and maintain beautiful, sustainable landscapes that thrive in any season.</p>
+            <a href="#contact" class="btn">Get Your Free Estimate</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Our Comprehensive Gardening Services</h2>
+            <div class="services">
+                <div class="service-card">
+                    <img src="s1.jpeg" alt="Garden Design & Installation" class="service-img">
+                    <div class="service-content">
+                        <h3>Garden Design & Installation</h3>
+                        <p>From concept to completion, we'll design and install your dream garden tailored to your space, climate, and personal style. Our designs incorporate sustainable practices and native plants.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="s2.jpeg" alt="Seasonal Maintenance" class="service-img">
+                    <div class="service-content">
+                        <h3>Seasonal Maintenance</h3>
+                        <p>Regular care for your garden through all seasons - pruning, mulching, fertilizing, and pest management to keep your plants healthy. We adjust our approach based on seasonal needs.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="s3.jpeg" alt="Lawn Care" class="service-img">
+                    <div class="service-content">
+                        <h3>Premium Lawn Care</h3>
+                        <p>Professional mowing, aeration, overseeding, and fertilization services to create a lush, healthy lawn. We use organic treatments and smart watering techniques for sustainable results.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="s4.jpeg" alt="Tree & Shrub Care" class="service-img">
+                    <div class="service-content">
+                        <h3>Tree & Shrub Care</h3>
+                        <p>Expert pruning, disease treatment, and fertilization for your trees and shrubs. Our certified arborists ensure proper care to maintain plant health and structural integrity.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="s5.jpeg" alt="Irrigation Systems" class="service-img">
+                    <div class="service-content">
+                        <h3>Smart Irrigation Systems</h3>
+                        <p>Design and installation of water-efficient irrigation systems with smart controllers that adjust watering based on weather conditions, saving water and money.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="s6.jpeg" alt="Edible Gardens" class="service-img">
+                    <div class="service-content">
+                        <h3>Edible Gardens</h3>
+                        <p>Create productive vegetable gardens, herb spirals, and fruit tree orchards. We design for maximum yield with organic methods and companion planting strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About GreenThumb Gardens</h2>
+            <div class="about-content">
+                <div>
+                    <img src="p1.png" alt="Our Team" class="about-img">
+                </div>
+                <div>
+                    <p>Founded in 2010, GreenThumb Gardens started as a small family business and has grown into one of the most trusted gardening service providers in the region. Our team of horticulture experts combines decades of experience with passion for plants and landscape design.</p>
+                    <p>We specialize in creating ecologically balanced gardens that require minimal maintenance while providing maximum visual appeal throughout the year. Our approach emphasizes native plants, sustainable practices, and water conservation techniques.</p>
+                    <p>What sets us apart is our commitment to education—we don't just transform your outdoor space, we teach you how to care for it too. Our clients receive personalized care instructions and ongoing support between visits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                   
+                    <h3>Jennifer Morrison</h3>
+                    <p>Homeowner, Buffalo</p>
+                    <p>"GreenThumb transformed my neglected backyard into a blooming paradise. Their knowledge of native plants saved me time and money on maintenance while attracting beautiful butterflies and birds."</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    
+                    <h3>Robert Chen</h3>
+                    <p>Property Manager, Albany</p>
+                    <p>"We've used GreenThumb for all our commercial properties for 5 years. Their team is reliable, professional, and amazingly knowledgeable. Our landscapes have never looked better!"</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                   
+                    <h3>Sarah Williams</h3>
+                    <p>Restaurant Owner, Rochester</p>
+                    <p>"The edible garden GreenThumb installed for our farm-to-table restaurant not only provides fresh herbs but creates a beautiful outdoor dining atmosphere. Our customers love it!"</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="consultant-content">
+        <div class="container">
+            <h2 class="section-title">Professional Gardening Makes All The Difference</h2>
+            <div class="content-section">
+                <h3>Why Hire Gardening Professionals?</h3>
+                <p>Gardening might seem straightforward, but creating and maintaining a thriving outdoor space requires specialized knowledge and skills. Professionally designed and maintained gardens have been shown to increase property values by up to 20% while reducing maintenance costs and water usage by up to 30%.</p>
+                <img src="https://images.unsplash.com/photo-1588943211346-0905a1b7631c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Professional gardening" style="width:100%; margin: 1.5rem 0; border-radius:8px;">
+                
+                <h3>Common DIY Gardening Mistakes</h3>
+                <p>Many homeowners attempt garden projects themselves, often resulting in common but costly mistakes:</p>
+                <ul>
+                    <li>Plant selection without considering soil type, sunlight, or climate conditions</li>
+                    <li>Improper planting techniques that stunt growth or cause premature death</li>
+                    <li>Overwatering or underwatering leading to plant stress or disease</li>
+                    <li>Incorrect pruning that damages plants or reduces flowering</li>
+                    <li>Failing to plan for seasonal changes in the landscape</li>
+                </ul>
+                
+                <h3>Our Comprehensive Approach</h3>
+                <p>At GreenThumb, we take a systematic approach to every project:</p>
+                <ol>
+                    <li><strong>Site Assessment</strong>: Analyzing soil, sunlight, drainage, and existing vegetation</li>
+                    <li><strong>Design Consultation</strong>: Creating a customized plan that meets your vision and budget</li>
+                    <li><strong>Implementation</strong>: Proper installation using best practices for plant health</li>
+                    <li><strong>Maintenance</strong>: Ongoing care with scheduled visits tailored to your garden's needs</li>
+                    <li><strong>Education</strong>: Teaching you how to care for your specific plants and features</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips">
+        <div class="container">
+            <h2 class="section-title">Gardening Tips for a Thriving Garden</h2>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h3>Choose Native Plants</h3>
+                    <p>Native plants are adapted to your local climate and soil conditions, making them easier to care for and more resilient.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Water Wisely</h3>
+                    <p>Water early in the morning or late in the evening to minimize evaporation. Consider drip irrigation for efficiency.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Mulch for Moisture</h3>
+                    <p>Applying mulch helps retain soil moisture, suppress weeds, and improve soil quality as it breaks down.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Rotate Crops</h3>
+                    <p>For vegetable gardens, rotating crops each season helps prevent soil depletion and reduces pest problems.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Regular Pruning</h3>
+                    <p>Pruning encourages healthy growth and flowering. Remove dead or diseased branches to keep plants thriving.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Soil Testing</h3>
+                    <p>Test your soil to understand its pH and nutrient levels, allowing you to amend it for optimal plant health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback-form" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+     <div class="customer-satisfaction">
+        <h2>Customer Satisfaction</h2>
+        <div class="satisfaction-metrics">
+            <div class="metric">
+                <h2>95%</h2>
+                <p>Customer Satisfaction Rate</p>
+            </div>
+            <div class="metric">
+                <h2>100+</h2>
+                <p>Projects Completed</p>
+            </div>
+            <div class="metric">
+                <h2>10 Years</h2>
+                <p>Experience in Gardening</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>721 Broadway, New York, NY 10003, USA</li>
+                    <li>Email: info@greenthumb.com</li>
+                    <li>Phone: (123) 456-7890</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 GreenThumb Gardens. All rights reserved.</p>
+            <p>Disclaimer: The information provided on this website is for general informational purposes only and should not be considered professional advice.</p>
+        </div>
+    </footer>
+
+   
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumb Gardens | Cookie Policy</title>
+    <style>
+        :root {
+            --primary: #4a8f29;
+            --primary-dark: #2a5e15;
+            --secondary: #f8f9fa;
+            --accent: #f4d03f;
+            --text: #333;
+            --light: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--secondary);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .cookies-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('s6.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            color: var(--light);
+            text-align: center;
+        }
+
+        .cookies-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cookies-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .cookies-content {
+            background-color: var(--light);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .cookies-point {
+            margin-bottom: 2rem;
+        }
+
+        .cookies-point h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--light);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--primary-dark);
+            color: var(--light);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cookie-consent p {
+            margin-right: 2rem;
+            flex: 1;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cookie-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .accept-btn {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            border: none;
+        }
+
+        .decline-btn {
+            background-color: transparent;
+            color: var(--light);
+            border: 1px solid var(--light);
+        }
+
+        .accept-btn:hover {
+            background-color: var(--light);
+            transform: translateY(-2px);
+        }
+
+        .decline-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .cookies-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .cookies-content {
+                padding: 2rem;
+            }
+
+            .cookie-consent {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-consent p {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Green<span>Thumb</span></a>
+                <div class="nav-links">
+                    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cookies-hero">
+        <div class="cookies-hero-content">
+            <h1>Cookie Policy</h1>
+            <p>Learn how we use cookies to enhance your browsing experience</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="cookies-content">
+                <h2 class="section-title">Our Cookie Policy Explained</h2>
+                
+                <div class="cookies-point">
+                    <h3>1. What Are Cookies?</h3>
+                    <p>Cookies are small text files that websites place on your device as you browse the web. They are widely used to make websites work more efficiently and provide information to site owners. Cookies allow websites to remember your preferences, login details, and other information to improve your user experience. They can be either session cookies (deleted when you close your browser) or persistent cookies (remain until they expire or you delete them). Cookies don't typically contain personal information but may track how you use a site. Modern web browsers allow you to control cookie settings through their privacy options.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>2. Types of Cookies We Use</h3>
+                    <p>We use several types of cookies on our website: Strictly Necessary cookies essential for site functionality, Performance cookies that collect anonymous data about site usage, Functionality cookies that remember your preferences, and Targeting/Advertising cookies that deliver relevant content. Each type serves a specific purpose to enhance your experience. We classify cookies as first-party (set by us) or third-party (set by services we use). Our cookie declaration provides detailed information about each cookie's purpose, duration, and provider. You can manage your cookie preferences through our consent tool.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>3. Why We Use Cookies</h3>
+                    <p>Cookies help us provide you with a better website experience by enabling basic functions like page navigation and access to secure areas. They allow us to understand how visitors interact with our site so we can improve performance and content. Cookies remember your preferences to personalize your experience and make the site more relevant to you. They help our marketing efforts by measuring the effectiveness of campaigns and delivering targeted content. Without cookies, some website features may not function properly. We never use cookies to collect sensitive personal information without your consent.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>4. Managing Cookie Preferences</h3>
+                    <p>You can control and manage cookies in various ways through your browser settings. Most browsers allow you to view, delete, and block cookies from specific sites. However, disabling cookies may affect website functionality and your user experience. Our cookie consent banner allows you to accept or reject different cookie categories. You can change your preferences at any time by clicking the "Cookie Settings" link in our footer. We provide clear information about each cookie category to help you make informed choices. For comprehensive guidance, consult your browser's help documentation on cookie management.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>5. Essential Cookies</h3>
+                    <p>Essential cookies are strictly necessary for our website to function properly. They enable core functionality such as security, network management, and accessibility. These cookies don't store personally identifiable information but are required for features like shopping carts or secure login. Without these cookies, services you've asked for cannot be provided. We don't require consent for essential cookies under most privacy regulations. Examples include cookies that maintain your session during navigation or balance load on our servers. These cookies are typically deleted when you close your browser.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>6. Performance Cookies</h3>
+                    <p>Performance cookies help us understand how visitors interact with our website by collecting anonymous information. This data includes pages visited, time spent on site, and error messages encountered. We use this information to improve how our website works and measure the effectiveness of our content. These cookies don't collect information that identifies visitors personally. The data is aggregated and therefore anonymous. Examples include Google Analytics cookies that help us analyze site traffic patterns. You can opt out of performance cookies without affecting site functionality.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>7. Functionality Cookies</h3>
+                    <p>Functionality cookies allow our website to remember choices you make and provide enhanced, more personal features. They may remember your username, language preference, or region to save you time on subsequent visits. These cookies can also be used to remember changes you've made to text size, fonts, and other customizable elements. The information collected is anonymized and doesn't track your browsing activity on other websites. While not strictly necessary, they significantly improve your browsing experience. You can block these cookies but some site features may not work as intended.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>8. Targeting/Advertising Cookies</h3>
+                    <p>Targeting cookies are used to deliver ads more relevant to you and your interests. They remember that you've visited our website and may share this information with other organizations such as advertisers. These cookies are also used to limit how many times you see an ad and help measure advertising campaign effectiveness. While we use these cookies responsibly, you may prefer to disable them if you're concerned about privacy. These cookies are typically placed by third-party advertising networks with our permission. You can manage these cookies through our consent tool or your browser settings.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>9. Third-Party Cookies</h3>
+                    <p>We use some third-party services that may set their own cookies to provide features like social media integration, videos, or analytics. These cookies are controlled by the respective third parties and subject to their privacy policies. Examples include cookies from Facebook, YouTube, or Google Maps. We carefully select third-party providers who respect user privacy and comply with data protection laws. However, we can't control how these third parties use cookies once they're set. We provide information about all third-party cookies in our cookie declaration for transparency.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>10. Cookie Duration</h3>
+                    <p>Cookies have varying lifespans depending on their purpose. Session cookies expire when you close your browser, while persistent cookies remain for a set period (from days to years). We set reasonable expiration periods based on each cookie's function. Essential cookies typically have shorter durations, while analytics cookies may persist longer to track trends. You can see the exact duration of each cookie in our detailed cookie list. Even persistent cookies can be manually deleted through your browser settings at any time. We regularly review cookie durations to ensure they're appropriate for their purpose.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>11. GDPR Compliance</h3>
+                    <p>Our cookie practices comply with the General Data Protection Regulation (GDPR) requirements. We provide clear information about cookie usage and obtain consent for non-essential cookies. Our cookie consent mechanism allows granular control over different cookie categories. We maintain records of consent and make it easy to withdraw consent at any time. Data collected through cookies is processed according to our Privacy Policy. We've implemented appropriate technical and organizational measures to protect personal data collected via cookies. EU residents have additional rights regarding their data as outlined in our Privacy Policy.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>12. CCPA Compliance</h3>
+                    <p>For California residents, our cookie practices align with the California Consumer Privacy Act (CCPA). We disclose our data collection practices, including cookie usage, in our Privacy Policy. California residents have the right to opt-out of the sale of personal information, which may include certain cookie data. We don't knowingly sell personal information of minors under 16 without authorization. Our "Do Not Sell My Personal Information" link provides an opt-out mechanism. We verify consumer requests to prevent fraudulent access to personal information. All CCPA rights can be exercised through our designated request channels.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>13. Cookie Consent Mechanism</h3>
+                    <p>Our cookie consent solution meets regulatory requirements by providing clear, granular choices. The initial banner appears on first visit, explaining cookie usage with options to accept, customize, or reject non-essential cookies. Users can revisit their choices anytime through the "Cookie Settings" link. We don't use non-essential cookies until consent is given. The system records consent preferences to honor them on subsequent visits. We regularly audit our consent mechanism to ensure compliance with evolving regulations. The interface is designed to be accessible and easy to understand for all users.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>14. Impact of Disabling Cookies</h3>
+                    <p>While you can disable cookies through browser settings, this may affect website functionality. Essential features like login, shopping carts, and security systems require cookies to work properly. Disabling cookies may prevent access to certain areas of our site or cause features to malfunction. Personalized content and preferences won't be saved between visits. Some third-party integrations may not work as intended. We recommend keeping essential cookies enabled for optimal experience while customizing other categories according to your preferences. Our site will still be accessible with basic functionality if you choose to disable cookies.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>15. Cookie Security</h3>
+                    <p>We implement security measures to protect cookies from unauthorized access or tampering. Secure cookies are transmitted over encrypted HTTPS connections to prevent interception. HttpOnly and SameSite attributes protect against certain types of attacks. We regularly review cookie security as part of our overall cybersecurity strategy. Session cookies contain random identifiers rather than personal data. While we take precautions, users should also practice good security habits like keeping browsers updated and avoiding public computers for sensitive activities. Report any security concerns to our Data Protection Officer immediately.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>16. Changes to Cookie Policy</h3>
+                    <p>We may update this Cookie Policy periodically to reflect changes in technology, legislation, or our services. Significant changes will be communicated through prominent notices on our website. The "Last Updated" date at the top indicates when the policy was last revised. We encourage users to review this policy regularly to stay informed. Continued use of our website after changes constitutes acceptance of the updated policy. Historical versions of the policy are archived and available upon request. For material changes affecting user rights, we may seek renewed consent where required by law.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>17. Cookie Audits</h3 <p>We conduct regular audits of our cookie usage to ensure compliance with applicable laws and best practices. These audits assess the types of cookies in use, their purposes, and their durations. We also evaluate the effectiveness of our cookie consent mechanism and user preferences. Any discrepancies or areas for improvement identified during audits are addressed promptly. Our commitment to transparency means we keep detailed records of our cookie audits and their outcomes. Users can request information about our audit processes and findings. Continuous improvement is a key aspect of our cookie management strategy.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>18. User Rights Regarding Cookies</h3>
+                    <p>Users have rights regarding their personal data collected through cookies, including the right to access, rectify, or delete their information. You can exercise these rights by contacting us through the channels provided in our Privacy Policy. We aim to respond to requests promptly and in accordance with applicable laws. Users can also withdraw consent for non-essential cookies at any time. We provide clear instructions on how to manage cookie preferences and rights in our cookie declaration. Understanding your rights is essential for informed consent and data protection.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>19. Cookie Policy for Minors</h3>
+                    <p>We do not knowingly collect personal information from minors under the age of 16 without parental consent. Our cookie practices are designed to comply with regulations protecting children's privacy. If we become aware that we have collected personal data from a minor without consent, we will take steps to delete that information. Parents and guardians are encouraged to monitor their children's online activities and manage cookie preferences accordingly. We provide resources for parents to understand our cookie policy and how to protect their children's privacy online.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>20. Cookie Policy Contact Information</h3>
+                    <p>If you have questions or concerns about our cookie policy, please contact us at info@greenthumb.com or call (123) 456-7890. Our Data Protection Officer is available to address any inquiries related to cookies and data privacy. We value your feedback and are committed to resolving any issues you may have. You can also reach out through our website's contact form for assistance. We encourage open communication regarding our cookie practices to ensure transparency and trust with our users.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>21. Cookie Policy Updates</h3>
+                    <p>We will notify users of significant changes to our cookie policy through prominent notices on our website. Users are encouraged to review the policy regularly to stay informed about our practices. The "Last Updated" date at the top of the policy indicates when it was last revised. We may also send email notifications to registered users regarding important updates. Your continued use of our website after changes signifies acceptance of the updated policy. We strive to keep our cookie policy clear and accessible for all users.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>22. Cookie Consent Management Tools</h3>
+                    <p>We provide users with tools to manage their cookie preferences easily. Our cookie consent banner allows you to accept or decline different categories of cookies. You can revisit your preferences at any time through the "Cookie Settings" link in the footer. We aim to make cookie management straightforward and user-friendly. Our consent management tools comply with regulatory requirements and respect user choices. We continuously improve these tools based on user feedback and technological advancements.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>23. Cookie Policy Transparency</h3>
+                    <p>Transparency is a core principle of our cookie policy. We provide detailed information about the types of cookies we use, their purposes, and how users can manage their preferences. Our cookie declaration is accessible and easy to understand, ensuring users are informed about our practices. We encourage users to ask questions and seek clarification about our cookie usage. Our commitment to transparency fosters trust and empowers users to make informed decisions regarding their online privacy.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>24. Cookie Policy for Third-Party Services</h3>
+                    <p>We utilize third-party services that may set cookies on our website. These services include analytics, advertising, and social media integrations. We carefully select third-party providers who adhere to privacy regulations and respect user data. Our cookie declaration includes information about third-party cookies, their purposes, and how users can manage them. We encourage users to review the privacy policies of third-party services for additional information on their cookie practices. We strive to maintain transparency regarding third-party cookie usage.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>25. Cookie Policy for Mobile Devices</h3>
+                    <p>Our cookie policy applies to users accessing our website from mobile devices. Mobile browsers have similar cookie management features as desktop browsers, allowing users to control their cookie preferences. We ensure our cookie consent banner is mobile-friendly and accessible on all devices. Users can manage cookies through their mobile browser settings, just as they would on a desktop. We aim to provide a consistent experience across all platforms while respecting user choices regarding cookies.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>26. Cookie Policy for International Users</h3>
+                    <p>Our cookie practices comply with international data protection laws, including GDPR and CCPA. We provide clear information about cookie usage and obtain consent from users in accordance with applicable regulations. International users can manage their cookie preferences through our consent tool. We respect the privacy rights of users from different jurisdictions and strive to provide a consistent experience while adhering to local laws. Our cookie policy is designed to be transparent and accessible for all users, regardless of location.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>27. Cookie Policy for E-commerce</h3>
+                    <p>For users engaging in e-commerce on our website, cookies play a crucial role in providing a seamless shopping experience. Essential cookies enable functionalities like shopping carts and secure checkout processes. We also use performance cookies to analyze user behavior and improve our e-commerce offerings. Users can manage their cookie preferences while ensuring essential cookies remain enabled for a smooth shopping experience. We prioritize user privacy while delivering a secure and efficient e-commerce platform.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>28. Cookie Policy for Marketing Campaigns</h3>
+                    <p>Cookies are integral to our marketing campaigns, allowing us to deliver targeted content and measure campaign effectiveness. We use targeting cookies to track user interactions and preferences, helping us refine our marketing strategies. Users can opt out of targeting cookies through our consent tool or their browser settings. We respect user choices regarding marketing cookies and strive to provide relevant content without compromising privacy. Our marketing practices are designed to be transparent and user-friendly.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>29. Cookie Policy for User Experience</h3>
+                    <p>Our cookie policy is designed to enhance user experience by providing personalized content and functionality. Cookies help us remember user preferences, enabling a tailored browsing experience. We continuously evaluate our cookie practices to ensure they align with user expectations and improve overall satisfaction. Users can manage their cookie preferences to customize their experience according to their needs. We value user feedback and use it to refine our cookie policy and practices.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>30. Cookie Policy for Data Analytics</h3>
+                    <p>We utilize cookies for data analytics to understand user behavior and improve our website. Performance cookies collect anonymous data about site usage, helping us identify trends and areas for improvement. We use this information to enhance our content and user experience. Users can opt out of performance cookies without affecting site functionality. Our commitment to data-driven decision-making ensures we continuously improve our website based on user insights.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>31. Cookie Policy for User Consent</h3>
+                    <p>User consent is a fundamental aspect of our cookie policy. We obtain explicit consent for non-essential cookies and provide users with clear options to manage their preferences. Our consent mechanism is designed to be user-friendly and compliant with regulations. Users can withdraw consent at any time through the "Cookie Settings" link. We prioritize user autonomy and strive to create a transparent environment regarding cookie usage. Our practices reflect our commitment to respecting user choices.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>32. Cookie Policy for Website Performance</h3>
+                    <p>Cookies play a vital role in optimizing website performance. They help us monitor site speed, load times, and user interactions, allowing us to make necessary improvements. Performance cookies provide insights into how users navigate our site, helping us identify bottlenecks and enhance overall functionality. Users can manage their cookie preferences while ensuring essential cookies remain enabled for optimal performance. Our commitment to continuous improvement ensures a seamless browsing experience for all users.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>33. Cookie Policy for User Engagement</h3>
+                    <p>Our cookie policy is designed to foster user engagement by providing personalized content and features. Cookies help us understand user preferences and tailor our offerings accordingly. We encourage users to manage their cookie preferences to enhance their engagement with our website. Our practices reflect our commitment to creating a user-centric experience that values individual preferences. We continuously evaluate user engagement metrics to refine our cookie policy and practices.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>34. Cookie Policy for Feedback</h3>
+                    <p>We welcome user feedback regarding our cookie policy and practices. Users can share their thoughts and suggestions through our contact channels. We value input from our users and use it to improve our cookie management strategies. Our commitment to transparency means we take feedback seriously and strive to address any concerns. We encourage open communication to ensure our cookie policy aligns with user expectations and preferences.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>35. Cookie Policy for Future Developments</h3>
+                    <p>As technology evolves, our cookie policy may adapt to incorporate new practices and regulations. We stay informed about industry trends and best practices to ensure our cookie management remains effective and compliant. Users can expect updates to our policy as necessary, with clear communication regarding any changes. Our commitment to continuous improvement ensures we provide a transparent and user-friendly cookie experience. We encourage users to stay informed about our cookie practices through our website.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>36. Cookie Policy for User Trust</h3>
+                    <p>Building user trust is a priority for our cookie policy. We strive to be transparent about our cookie practices and respect user choices. Our consent mechanism is designed to empower users to manage their preferences easily. We prioritize user privacy and data protection in all our cookie practices. By fostering trust, we aim to create a positive user experience that encourages ongoing engagement with our website. We appreciate the trust users place in us and work diligently to uphold it.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>37. Cookie Policy for Accessibility</h3>
+                    <p>Our cookie policy is designed to be accessible to all users, including those with disabilities. We ensure our cookie consent banner and management tools are compliant with accessibility standards. Users can easily navigate our cookie preferences regardless of their abilities. We continuously evaluate our practices to enhance accessibility and inclusivity. Feedback from users regarding accessibility is welcomed and taken into consideration for future improvements. Our commitment to accessibility reflects our dedication to serving all users effectively.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>38. Cookie Policy for User Education</h3>
+                    <p>We believe in educating users about cookies and their implications for privacy. Our cookie policy includes clear explanations of cookie types, purposes, and management options. We provide resources to help users understand how cookies work and their role in enhancing the browsing experience. By promoting user education, we empower individuals to make informed decisions regarding their cookie preferences. We encourage users to reach out with questions or seek clarification about our cookie practices.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>39. Cookie Policy for Data Minimization</h3>
+                    <p>We adhere to the principle of data minimization in our cookie practices. We only collect and retain cookies that are necessary for providing a functional and personalized experience. Our cookie declaration outlines the specific cookies we use and their purposes, ensuring transparency. Users can manage their preferences to limit cookie collection according to their needs. We regularly review our cookie practices to ensure compliance with data minimization principles. Our commitment to responsible data handling reflects our dedication to user privacy.</p>
+                </div>
+
+                <div class="cookies-point">
+                    <h3>40. Conclusion</h3>
+                    <p>Thank you for taking the time to read our cookie policy. We are committed to transparency and user empowerment regarding cookie usage. Our practices are designed to enhance your browsing experience while respecting your privacy. If you have any questions or concerns, please don't hesitate to reach out to us. We appreciate your trust and look forward to providing you with a seamless online experience. Your feedback is invaluable as we continue to refine our cookie practices and policies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>721 Broadway, New York, NY 10003, USA</li>
+                    <li>Email: info@greenthumb.com</li>
+                    <li>Phone: (123) 456-7890</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 GreenThumb Gardens. All rights reserved.</p>
+            <p>Disclaimer: The information provided on this website is for general informational purposes only and should not be considered professional advice.</p>
+        </div>
+    </footer>
+
+    <div class="cookie-consent">
+        <p>We use cookies to enhance your browsing experience. By clicking "Accept," you consent to our use of cookies. You can manage your preferences in the settings.</p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn accept-btn">Accept</button>
+            <button class="cookie-btn decline-btn">Decline</button>
+        </div>
+    </div>
+</body>
+</html>

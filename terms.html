@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumb Gardens | Terms and Conditions</title>
+    <style>
+        :root {
+            --primary: #4a8f29;
+            --primary-dark: #2a5e15;
+            --secondary: #f8f9fa;
+            --accent: #f4d03f;
+            --text: #333;
+            --light: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--secondary);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--light);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a:focus {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a[aria-current="page"] {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .terms-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('s6.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            color: var(--light);
+            text-align: center;
+        }
+
+        .terms-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .terms-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .terms-content {
+            background-color: var(--light);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .terms-point {
+            margin-bottom: 2rem;
+        }
+
+        .terms-point h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--light);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .terms-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .terms-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Green<span>Thumb</span></a>
+                <div class="nav-links">
+                    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="terms-hero">
+        <div class="terms-hero-content">
+            <h1>Terms and Conditions</h1>
+            <p>Please read these terms carefully before using our services.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="terms-content">
+                <h2 class="section-title">Terms of Service Agreement</h2>
+                
+                <div class="terms-point">
+                    <h3>1. Acceptance of Terms</h3>
+                    <p>By accessing or using GreenThumb Gardens' website and services, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree with any part of these terms, you must not use our services. These terms constitute a legally binding agreement between you and GreenThumb Gardens regarding your use of our website and services. We reserve the right to modify these terms at any time, and your continued use constitutes acceptance of any changes.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>2. Services Description</h3>
+                    <p>GreenThumb Gardens provides professional landscaping, garden design, maintenance, and related services. All services are described on our website and may be modified or discontinued at our discretion without notice. We make reasonable efforts to ensure service descriptions are accurate but do not guarantee that descriptions are complete or error-free. Some services may have additional terms communicated during the consultation or contract process.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>3. User Responsibilities</h3>
+                    <p>You agree to provide accurate and complete information when using our services and to update such information as necessary. You are responsible for maintaining the confidentiality of any account credentials and for all activities under your account. You must not use our services for any illegal or unauthorized purpose, and you must comply with all applicable laws in your jurisdiction when using our services, including local gardening and landscaping regulations.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>4. Payment Terms</h3>
+                    <p>All services require payment unless otherwise agreed in writing. We accept various payment methods which will be specified during checkout. Payment is due as outlined in your service agreement - typically before service commencement or immediately upon completion. Late payments may incur additional charges at our discretion. We reserve the right to refuse service to anyone with outstanding balances or unresolved payment disputes.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>5. Cancellation Policy</h3>
+                    <p>For scheduled services, cancellations must be made at least 48 hours in advance to avoid charges. Emergency cancellations due to unforeseen circumstances will be evaluated case by case. Repeated cancellations may result in termination of services or require prepayment for future bookings. We reserve the right to cancel services due to weather conditions, safety concerns, or other circumstances beyond our control without penalty.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>6. Satisfaction Guarantee</h3>
+                    <p>We strive for 100% customer satisfaction with all our services. If you're not completely satisfied, please notify us within 24 hours of service completion for us to make reasonable efforts to correct the issue. This guarantee applies only to workmanship issues, not to changes in personal preferences or natural processes beyond our control (e.g., plant growth patterns). Certain limitations may apply as detailed in your service contract.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>7. Property Access</h3>
+                    <p>By engaging our services, you grant GreenThumb Gardens personnel access to your property at scheduled service times. You agree to ensure safe access to all work areas and to disclose any potential hazards. We are not responsible for items left in work areas during service. If we cannot safely access necessary areas, services may be postponed or canceled with applicable charges. Gates must be unlocked, and pets secured during service visits.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>8. Property Damage</h3>
+                    <p>While we take utmost care, landscaping activities carry inherent risks of property damage. We carry liability insurance and will repair or compensate for accidental damage caused directly by our employees during service. Pre-existing conditions or damage not promptly reported may not be covered. Damage caused by pre-existing conditions, hidden obstacles, or acts beyond our control are not our responsibility. Prompt notification of any damage is required.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>9. Plant Health Guarantee</h3>
+                    <p>Plants installed by GreenThumb Gardens carry a 90-day guarantee against defects in materials and workmanship. We will replace plants that fail due to these reasons at no additional cost. This guarantee does not cover plants affected by extreme weather, pests, diseases, improper watering, or other factors beyond our control. Specific guarantee terms will accompany plant installation contracts. Proof of purchase and proper care documentation may be required.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>10. Weather Conditions</h3>
+                    <p>Landscaping services may be delayed or rescheduled due to inclement weather at our discretion for safety and quality reasons. We will make reasonable efforts to notify you of weather-related changes. Services affected by weather will be rescheduled at the earliest available opportunity. Some services like irrigation winterization are weather-dependent and must be scheduled accordingly. No refunds will be given for weather-related delays beyond our control.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>11. Service Interruptions</h3>
+                    <p>While we strive to maintain uninterrupted service, occasional interruptions may occur due to maintenance, upgrades, emergencies, or circumstances beyond our control. We will make reasonable efforts to minimize service interruptions and notify clients of significant scheduled outages. We are not liable for any consequences resulting from such interruptions. Emergency service requests will be prioritized according to severity and existing commitments.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>12. Third-Party Services</h3>
+                    <p>We may recommend or arrange third-party services (e.g., tree removal, hardscape installation) as part of our offerings. These services are governed by separate agreements between you and the service provider. GreenThumb Gardens acts only as a referral agent and is not responsible for third-party work quality or outcomes. We can provide references for preferred providers but encourage you to verify their credentials and insurance coverage independently.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>13. Intellectual Property</h3>
+                    <p>All content on our website, including text, graphics, logos, designs, and layouts, is our property or licensed to us and protected by intellectual property laws. You may view and print pages for personal use but must not reproduce, modify, distribute, or commercially exploit any content without our express written permission. Landscape designs created by us remain our intellectual property unless otherwise agreed in writing.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>14. User-Generated Content</h3>
+                    <p>If you submit reviews, photos, or other content to us, you grant GreenThumb Gardens a perpetual, royalty-free license to use, modify, and display this content for promotional and business purposes. You represent that you own or have permission to use any content you submit. We reserve the right to remove or refuse to post any content at our discretion without notice. Personal information in submissions will be handled according to our Privacy Policy.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>15. Prohibited Conduct</h3>
+                    <p>Users must not: interfere with service operations; attempt unauthorized access to our systems; use services to spread malware; harass our personnel; post false or defamatory information; violate any laws; or engage in any fraudulent activity. We reserve the right to refuse service and pursue legal action against violators. Any threatening or abusive behavior toward staff will result in immediate termination of services.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>16. Limitation of Liability</h3>
+                    <p>To the maximum extent permitted by law, GreenThumb Gardens shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from use of our services. Our total liability for any claim related to our services is limited to the amount paid for the specific service giving rise to the claim. Some jurisdictions do not allow limitations of liability, so this may not apply to you.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>17. Indemnification</h3>
+                    <p>You agree to indemnify and hold harmless GreenThumb Gardens, its officers, employees, and agents from any claims, damages, liabilities, and expenses arising from your use of our services, violation of these terms, or infringement of any third-party rights. This includes reasonable attorneys' fees. We reserve the right to assume exclusive defense and control of any matter subject to indemnification, at your expense.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>18. Governing Law</h3>
+                    <p>These terms shall be governed by and construed in accordance with the laws of the State of New York, without regard to its conflict of law provisions. Any disputes arising from these terms or our services shall be resolved in the state or federal courts located in New York County, New York. You consent to the exclusive jurisdiction and venue of these courts. The United Nations Convention on Contracts for the International Sale of Goods does not apply.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>19. Dispute Resolution</h3>
+                    <p>Before filing any legal action, parties agree to attempt informal resolution through good faith negotiations. If unresolved within 30 days, disputes shall be settled by binding arbitration administered by the American Arbitration Association under its Commercial Arbitration Rules. Judgment on the award may be entered in any court having jurisdiction. Each party bears its own costs unless the arbitrator decides otherwise. Class actions are not permitted.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>20. Severability</h3>
+                    <p>If any provision of these terms is found invalid or unenforceable by a court of competent jurisdiction, that provision will be limited or eliminated to the minimum extent necessary so that the remaining terms remain in full force and effect. Our failure to enforce any right or provision under these terms shall not constitute a waiver of such right or provision unless acknowledged in writing by us.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>21. Amendments and Modifications</h3>
+                    <p>We reserve the right to modify these terms at any time. Material changes will be posted on our website with notice of the effective date. Your continued use after changes become effective constitutes acceptance. For service contracts, the terms in effect at the time of contract signing govern that specific service unless mutually amended in writing. Please review these terms periodically for changes.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>22. Entire Agreement</h3>
+                    <p>These terms, together with any service agreements or policies referenced herein, constitute the entire agreement between you and GreenThumb Gardens regarding our services, superseding any prior agreements. No verbal statements or written materials not expressly incorporated herein shall be binding. These terms shall prevail over any conflicting terms in purchase orders or other documents unless expressly agreed in writing by both parties.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>23. Assignment</h3>
+                    <p>You may not assign or transfer these terms or your rights hereunder without our prior written consent. Any attempted assignment in violation of this section shall be null and void. We may freely assign our rights and obligations under these terms, including in connection with a merger, acquisition, restructuring, or sale of assets. These terms shall inure to the benefit of and be binding upon the parties and their permitted successors.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>24. Force Majeure</h3>
+                    <p>We shall not be liable for any failure or delay in performance due to events beyond our reasonable control, including natural disasters, acts of war, terrorism, riots, governmental actions, epidemics, pandemics, labor disputes, utility failures, or internet outages. Performance times shall be extended for the duration of such events. If force majeure lasts more than 30 days, either party may terminate the agreement without penalty. Notice of such termination must be provided in writing. We will make reasonable efforts to resume performance as soon as possible after the event concludes.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>25. Marketing Communications</h3>
+                    <p>By using our services, you consent to receive marketing communications from GreenThumb Gardens. You may opt-out of receiving these communications at any time by following the unsubscribe instructions included in each email or by contacting us directly. We respect your privacy and will not share your contact information with third parties for marketing purposes without your consent.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>26. Feedback and Reviews</h3>
+                    <p>We welcome feedback and reviews from our customers. By submitting feedback, you grant us the right to use your comments for promotional purposes. We may publish your feedback on our website or in marketing materials, but we will not disclose your personal information without your consent. We reserve the right to edit or remove any feedback that we deem inappropriate or offensive.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>27. Social Media Policy</h3>
+                    <p>We encourage customers to engage with us on social media platforms. However, we reserve the right to remove any comments or posts that are offensive, abusive, or violate our community guidelines. We are not responsible for the content posted by users on our social media pages and do not endorse any opinions expressed therein. Please be respectful and constructive in your interactions.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>28. Privacy Policy</h3>
+                    <p>Your use of our services is also governed by our Privacy Policy, which outlines how we collect, use, and protect your personal information. By using our services, you acknowledge that you have read and understood our Privacy Policy. We encourage you to review it periodically for updates. If you have any questions about our privacy practices, please contact us.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>29. Contact Information</h3>
+                    <p>If you have any questions or concerns regarding these Terms and Conditions, please contact us at:</p>
+                    <p>Email: info@greenthumb.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 721 Broadway, New York, NY 10003, USA</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>30. User Account Security</h3>
+                    <p>You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security. We will not be liable for any loss or damage arising from your failure to comply with this security obligation.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>31. Third-Party Links</h3>
+                    <p>Our website may contain links to third-party websites. We do not control these websites and are not responsible for their content or practices. We encourage you to review the terms and privacy policies of any third-party sites you visit. Your use of third-party websites is at your own risk, and we are not liable for any damages resulting from your interactions with them.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>32. Electronic Communications</h3>
+                    <p>By using our services, you consent to receive electronic communications from us. These communications may include notices about your account, service updates, and promotional offers. You agree that all agreements, notices, disclosures, and other communications we provide to you electronically will satisfy any legal requirements that such communications be in writing.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>33. Waiver</h3>
+                    <p>The failure of GreenThumb Gardens to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision. Any waiver of any provision of these Terms will be effective only if in writing and signed by an authorized representative of GreenThumb Gardens. No waiver of any breach or default shall be deemed a waiver of any subsequent breach or default.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>34. Headings</h3>
+                    <p>The headings in these Terms are for convenience only and shall not affect the interpretation of these Terms. They are not intended to be legally binding and do not limit the scope of the provisions they precede. The headings are included solely for ease of reference and should not be used to construe the meaning of any provision.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>35. Force Majeure</h3>
+                    <p>We shall not be liable for any failure to perform our obligations under these Terms if such failure results from any cause beyond our reasonable control, including, but not limited to, mechanical, electronic, or communications failure or degradation. In the event of a force majeure event, we will make reasonable efforts to resume performance as soon as possible.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>36. Termination</h3>
+                    <p>We reserve the right to terminate or suspend your access to our services at any time, without prior notice or liability, for any reason, including if you breach these Terms. Upon termination, your right to use the services will immediately cease. If you wish to terminate your account, you may simply discontinue using the services.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>37. Survival</h3>
+                    <p>All provisions of these Terms which by their nature should survive termination shall survive, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability. The termination of these Terms shall not affect any rights or obligations that have accrued prior to such termination.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>38. No Partnership</h3>
+                    <p>Nothing in these Terms shall be construed to create a partnership, joint venture, agency, or employment relationship between you and GreenThumb Gardens. Neither party has the authority to bind the other in any respect. These Terms do not confer any rights or benefits on any third party.</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>39. Contact Us</h3>
+                    <p>If you have any questions about these Terms and Conditions, please contact us at:</p>
+                    <p>Email: info@greenthumb.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Address: 721 Broadway, New York, NY 10003, USA</p>
+                </div>
+
+                <div class="terms-point">
+                    <h3>40. Conclusion</h3>
+                    <p>By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use our services. We appreciate your business and look forward to serving you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>721 Broadway, New York, NY 10003, USA</li>
+                    <li>Email: info@greenthumb.com</li>
+                    <li>Phone: (123) 456-7890</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 GreenThumb Gardens. All rights reserved.</p>
+            <p>Disclaimer: The information provided on this website is for general informational purposes only and should not be considered professional advice.</p>
+        </div>
+    </footer>
+</body>
+</html>
